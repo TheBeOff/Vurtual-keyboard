@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <textarea id="area" class="textarea">
+        </textarea>
+    <div id="keyboard" class="keyboard-wrapper">
+        <div class="keyboard-row">
+            <span class="keyConsole">
+                <span class="keyTextDown">`</span>
+                <span class="keyTextUp hidden">~</span>
+                <span class="keyTextCaps hidden">~</span>
+            </span>
+            <span class="key1">
+                <span class="keyTextDown">1</span>
+                <span class="keyTextUp hidden">!</span>
+                <span class="keyTextCaps hidden">!</span>
+            </span>
+            <span class="key2">
+                <span class="keyTextDown">2</span>
+                <span class="keyTextUp hidden">@</span>
+                <span class="keyTextCaps hidden">@</span>
+            </span>
+            <span class="key3">
+                <span class="keyTextDown">3</span>
+                <span class="keyTextUp hidden">#</span>
+                <span class="keyTextCaps hidden">#</span>
+            </span>
+            <span class="key4">
+                <span class="keyTextDown">4</span>
+                <span class="keyTextUp hidden">$</span>
+                <span class="keyTextCaps hidden">$</span>
+            </span>
+            <span class="key5">
+                <span class="keyTextDown">5</span>
+                <span class="keyTextUp hidden">%</span>
+                <span class="keyTextCaps hidden">%</span>
+            </span>
+            <span class="key6">
+                <span class="keyTextDown">6</span>
+                <span class="keyTextUp hidden">^</span>
+                <span class="keyTextCaps hidden">^</span>
+            </span>
+            <span class="key7">
+                <span class="keyTextDown">7</span>
+                <span class="keyTextUp hidden">&</span>
+                <span class="keyTextCaps hidden">&</span>
+            </span>
+            <span class="key8">
+                <span class="keyTextDown">8</span>
+                <span class="keyTextUp hidden">*</span>
+                <span class="keyTextCaps hidden">*</span>
+            </span>
+            <span class="key9">
+                <span class="keyTextDown">9</span>
+                <span class="keyTextUp hidden">(</span>
+                <span class="keyTextCaps hidden">(</span>
+            </span>
+            <span class="key0">
+                <span class="keyTextDown">0</span>
+                <span class="keyTextUp hidden">)</span>
+                <span class="keyTextCaps hidden">)</span>
+            </span>
+            <span class="keyMinus">
+                <span class="keyTextDown">-</span>
+                <span class="keyTextUp hidden">_</span>
+                <span class="keyTextCaps hidden">_</span>
+            </span>
+            <span class="keyEqual">
+                <span class="keyTextDown">=</span>
+                <span class="keyTextUp hidden">+</span>
+                <span class="keyTextCaps hidden">+</span>
+            </span>
+            <span class="keyBack">
+                <span class="keyToolDown">Backspace</span>
+                <span class="keyToolUp hidden">Backspace</span>
+                <span class="keyToolCaps hidden">Backspace</span>
+            </span>
+            
+        </div>
+        <div class="keyboard-row">
+            <span class="keyTab">
+                <span class="keyToolDown">TAB</span>
+                <span class="keyToolUp hidden">TAB</span>
+                <span class="keyToolCaps hidden">TAB</span>
+            </span>
+            <span class="keyQ">
+                <span class="keyTextDown">q</span>
+                <span class="keyTextUp hidden">Q</span>
+                <span class="keyTextCaps hidden">Q</span>
+            </span>
+            <span class="keyW">
+                <span class="keyTextDown">w</span>
+                <span class="keyTextUp hidden">W</span>
+                <span class="keyTextCaps hidden">W</span>
+            </span>
+            <span class="keyE">
+                <span class="keyTextDown">e</span>
+                <span class="keyTextUp hidden">E</span>
+                <span class="keyTextCaps hidden">E</span>
+            </span>
+            <span class="keyR">
+                <span class="keyTextDown">r</span>
+                <span class="keyTextUp hidden">R</span>
+                <span class="keyTextCaps hidden">R</span>
+            </span>
+            <span class="keyT">
+                <span class="keyTextDown">t</span>
+                <span class="keyTextUp hidden">T</span>
+                <span class="keyTextCaps hidden">T</span>
+            </span>
+            <span class="keyY">
+                <span class="keyTextDown">y</span>
+                <span class="keyTextUp hidden">Y</span>
+                <span class="keyTextCaps hidden">Y</span>
+            </span>
+            <span class="keyU">
+                <span class="keyTextDown">u</span>
+                <span class="keyTextUp hidden">U</span>
+                <span class="keyTextCaps hidden">U</span>
+            </span>
+            <span class="keyI">
+                <span class="keyTextDown">i</span>
+                <span class="keyTextUp hidden">I</span>
+                <span class="keyTextCaps hidden">I</span>
+            </span>
+            <span class="keyO">
+                <span class="keyTextDown">o</span>
+                <span class="keyTextUp hidden">O</span>
+                <span class="keyTextCaps hidden">O</span>
+            </span>
+            <span class="keyP">
+                <span class="keyTextDown">p</span>
+                <span class="keyTextUp hidden">P</span>
+                <span class="keyTextCaps hidden">P</span>
+            </span>
+            <span class="key[">
+                <span class="keyTextDown">[</span>
+                <span class="keyTextUp hidden">{</span>
+                <span class="keyTextCaps hidden">{</span>
+            </span>
+            <span class="key]">
+                <span class="keyTextDown">]</span>
+                <span class="keyTextUp hidden">}</span>
+                <span class="keyTextCaps hidden">}</span>
+            </span>
+            <span class="key\">
+                <span class="keyTextDown">\</span>
+                <span class="keyTextUp hidden">|</span>
+                <span class="keyTextCaps hidden">|</span>
+            </span>
+        </div>
+        <div class="keyboard-row">
+            <span class="keyCapsLock">
+                <span class="keyToolDown">CAPS LOCK</span>
+                <span class="keyToolUp hidden">CAPS LOCK</span>
+                <span class="keyToolCaps hidden">CAPS LOCK</span>
+            </span>
+            
+            <span class="keyA">
+                <span class="keyTextDown">a</span>
+                <span class="keyTextUp hidden">A</span>
+                <span class="keyTextCaps hidden">A</span>
+            </span>
+            <span class="keyS">
+                <span class="keyTextDown">s</span>
+                <span class="keyTextUp hidden">S</span>
+                <span class="keyTextCaps hidden">S</span>
+            </span>
+            <span class="KeyD">
+                <span class="keyTextDown">d</span>
+                <span class="keyTextUp hidden">D</span>
+                <span class="keyTextCaps hidden">D</span>
+            </span>
+            <span class="keyF">
+                <span class="keyTextDown">f</span>
+                <span class="keyTextUp hidden">F</span>
+                <span class="keyTextCaps hidden">F</span>
+            </span>
+            <span class="keyG">
+                <span class="keyTextDown">g</span>
+                <span class="keyTextUp hidden">G</span>
+                <span class="keyTextCaps hidden">G</span>
+            </span>
+            <span class="keyH">
+                <span class="keyTextDown">h</span>
+                <span class="keyTextUp hidden">H</span>
+                <span class="keyTextCaps hidden">H</span>
+            </span>
+            <span class="keyJ">
+                <span class="keyTextDown">j</span>
+                <span class="keyTextUp hidden">J</span>
+                <span class="keyTextCaps hidden">J</span>
+            </span>
+            <span class="keyK">
+                <span class="keyTextDown">k</span>
+                <span class="keyTextUp hidden">K</span>
+                <span class="keyTextCaps hidden">L</span>
+            </span>
+            <span class="keyL">
+                <span class="keyTextDown">l</span>
+                <span class="keyTextUp hidden">L</span>
+                <span class="keyTextCaps hidden">L</span>
+            </span>
+            <span class="keySemicolon">
+                <span class="keyTextDown">;</span>
+                <span class="keyTextUp hidden">:</span>
+                <span class="keyTextCaps hidden">:</span>
+            </span>
+            <span class="keyQuote">
+                <span class="keyTextDown">'</span>
+                <span class="keyTextUp hidden">"</span>
+                <span class="keyTextCaps hidden">"</span>
+            </span>
+            <span class="keyEnter">
+                <span class="keyToolDown">Enter</span>
+                <span class="keyToolUp hidden">Enter</span>
+                <span class="keyToolCaps hidden">Enter</span>
+            </span>
+            
+        </div>
+        <div class="keyboard-row">
+            <span class="keyShiftLeft">
+                <span class="keyToolDown">Shift</span>
+                <span class="keyToolUp hidden">Shift</span>
+                <span class="keyToolCaps hidden">Shift</span>
+            </span>
+            <span class="keyZ">
+                <span class="keyTextDown">z</span>
+                <span class="keyTextUp hidden">Z</span>
+                <span class="keyTextCaps hidden">Z</span>
+            </span>
+            <span class="keyX">
+                <span class="keyTextDown">x</span>
+                <span class="keyTextUp hidden">X</span>
+                <span class="keyTextCaps hidden">X</span>
+            </span>
+            <span class="keyC">
+                <span class="keyTextDown">c</span>
+                <span class="keyTextUp hidden">C</span>
+                <span class="keyTextCaps hidden">C</span>
+            </span>
+            <span class="keyV">
+                <span class="keyTextDown">v</span>
+                <span class="keyTextUp hidden">V</span>
+                <span class="keyTextCaps hidden">V</span>
+            </span>
+            <span class="keyB">
+                <span class="keyTextDown">b</span>
+                <span class="keyTextUp hidden">B</span>
+                <span class="keyTextCaps hidden">B</span>
+            </span>
+            <span class="keyN">
+                <span class="keyTextDown">n</span>
+                <span class="keyTextUp hidden">N</span>
+                <span class="keyTextCaps hidden">N</span>
+            </span>
+            <span class="keyM">
+                <span class="keyTextDown">m</span>
+                <span class="keyTextUp hidden">M</span>
+                <span class="keyTextCaps hidden">M</span>
+            </span>
+            <span class="keyComma">
+                <span class="keyTextDown">,</span>
+                <span class="keyTextUp hidden"><</span>
+                <span class="keyTextCaps hidden"><</span>
+            </span>
+            <span class="keyPeriod">
+                <span class="keyTextDown">.</span>
+                <span class="keyTextUp hidden">></span>
+                <span class="keyTextCaps hidden">></span>
+            </span>
+            <span class="keySlac">
+                <span class="keyTextDown">/</span>
+                <span class="keyTextUp hidden">?</span>
+                <span class="keyTextCaps hidden">?</span>
+            </span>
+            <span class="keyArrowUp">
+                <span class="keyTextDown">▲</span>
+                <span class="keyTextUp hidden">▲</span>
+                <span class="keyTextCaps hidden">▲</span>
+            </span>
+            <span class="keyShiftRight">
+                <span class="keyToolDown">Shift</span>
+                <span class="keyToolUp hidden">Shift</span>
+                <span class="keyToolCaps hidden">Shift</span>
+            </span>
+            
+        </div>
+        <div class="keyboard-row">
+            <span class="keyCtrl">
+                <span class="keyToolDown">Ctrl</span>
+                <span class="keyToolUp hidden">Ctrl</span>
+                <span class="keyToolCaps hidden">Ctrl</span>
+            </span>
+            <span class="keyWin">
+                <span class="keyToolDown">Win</span>
+                <span class="keyToolUp hidden">Win</span>
+                <span class="keyToolCaps hidden">Win</span>
+            </span>
+            <span class="keyAlt">
+                <span class="keyToolDown">Alt</span>
+                <span class="keyToolUp hidden">Alt</span>
+                <span class="keyToolCaps hidden">Alt</span>
+            </span>
+            <span class="keySpace key">
+                <span class="keyTextDown">&nbsp;</span>
+                <span class="keyTextUp hidden">&nbsp;</span>
+                <span class="keyTextCaps hidden">&nbsp;</span>
+            </span>
+            <span class="keyAlt">
+                <span class="keyToolDown">Alt</span>
+                <span class="keyToolUp hidden">Alt</span>
+                <span class="keyToolCaps hidden">Alt</span>
+            </span>
+            <span class="keyArrowLeft">
+                <span class="keyTextDown">◄</span>
+                <span class="keyTextUp hidden">◄</span>
+                <span class="keyTextCaps hidden">◄</span>
+            </span>
+            <span class="keyArrowDown">
+                <span class="keyTextDown">▼</span>
+                <span class="keyTextUp hidden">▼</span>
+                <span class="keyTextCaps hidden">▼</span>
+            </span>
+            <span class="keyArrowRight">
+                <span class="keyTextDown">►</span>
+                <span class="keyTextUp hidden">►</span>
+                <span class="keyTextCaps hidden">►</span>
+            </span>
+            <span class="keyCtrl">
+                <span class="keyToolDown">Ctrl</span>
+                <span class="keyToolUp hidden">Ctrl</span>
+                <span class="keyToolCaps hidden">Ctrl</span>
+            </span>
+            
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

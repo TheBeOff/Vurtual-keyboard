@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background-color: #FFFE40;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.textarea {
+    margin-left: 93px;
+    width: 760px;
+    height: 203px;
+    background-color: #AC66D5;
+    color: #ffffff;
+    box-shadow: 1px 1px 6px 3px #84004D;
+}
+
+.keyboard-wrapper {
+    margin: 0 auto;
+    width: 760px;
+    height: 280px;
+    background-color: #506275;
+}
+
+.keyboard-row {
+    height: 50px;
+    background-color: #84004D;
+    margin-bottom: 5px;
+}
+span {
+    display: inline-block;
+    margin: 1px 1px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.keyTextCaps, .keyTextUp, .keyTextDown {
+    width: 40px;
+    height: 40px;
+    margin: 1px 1px;
+    background-color: #FFFE40;
+}
+
+.keyBack .keyToolDown, .keyToolUp, .keyToolCaps {
+    width: 110px;
+}
+.keyCapsLock .keyToolDown, .keyToolUp, .keyToolCaps{
+    width: 110px;
+} 
+.keyShiftLeft .keyToolDown, .keyToolUp, .keyToolCaps{
+    width: 110px;
+}
+
+.keyTab .keyToolDown, .keyToolUp, .keyToolCaps{
+    width: 90px;
+}
+.keyEnter .keyToolDown, .keyToolUp, .keyToolCaps{
+    width: 90px;
+}
+.keyShiftRight .keyToolDown, .keyToolUp, .keyToolCaps{
+    width: 90px;
+}
+
+.keySpace  .keyTextDown, .keyTextUp, .keyTextCaps{
+    width: 350px;
+    background-color: #FFFE40;
+}
+
+.keyCtrl
+
+.hidden {
+    display: none;
+}
