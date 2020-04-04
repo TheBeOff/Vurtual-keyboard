@@ -28,47 +28,76 @@ body {
     background-color: #84004D;
     margin-bottom: 5px;
 }
-span {
+.key {
     display: inline-block;
     margin: 1px 1px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     line-height: 40px;
+    background-color: #FFFE40;
     cursor: pointer;
 }
 
 .keyTextCaps, .keyTextUp, .keyTextDown {
-    width: 40px;
-    height: 40px;
-    margin: 1px 1px;
-    background-color: #FFFE40;
+    display: block;
+    min-width: 40px;
 }
 
-.keyBack .keyToolDown, .keyToolUp, .keyToolCaps {
-    width: 110px;
-}
-.keyCapsLock .keyToolDown, .keyToolUp, .keyToolCaps{
-    width: 110px;
-} 
-.keyShiftLeft .keyToolDown, .keyToolUp, .keyToolCaps{
+.Backspace, .CapsLock, .ShiftLeft {
     width: 110px;
 }
 
-.keyTab .keyToolDown, .keyToolUp, .keyToolCaps{
-    width: 90px;
+.keyToolDown, .keyToolUp, .keyToolCaps {
+    display: block;
+    min-width: 89px;
 }
-.keyEnter .keyToolDown, .keyToolUp, .keyToolCaps{
-    width: 90px;
-}
-.keyShiftRight .keyToolDown, .keyToolUp, .keyToolCaps{
+
+.Tab, .Enter, .ShiftRight {
     width: 90px;
 }
 
-.keySpace  .keyTextDown, .keyTextUp, .keyTextCaps{
+.Space {
     width: 350px;
     background-color: #FFFE40;
 }
 
-.keyCtrl
+.ControlLeft, .AltLeft, .MetaLeft {
+    width: 40px;
+    height: 40px;
+}
+
+.ControlLeft .keyToolDown {
+    min-width: 0;
+}
+.MetaLeft .keyToolDown {
+    min-width: 0;
+}
+.AltLeft .keyToolDown {
+    min-width: 0;
+}
+.AltRight .keyToolDown {
+    min-width: 0;
+}
+.ControlRight .keyToolDown {
+    min-width: 0;
+}
+
+
+
+
+.Backspace, .CapsLock, .ShiftLeft,
+.Tab, .Enter, .ShiftRight,
+.ControlRight, .AltLeft, .MetaLeft,
+.ControlLeft, .AltRight {
+    background-color: gray;
+}
+
+
+.active {
+    background-color: greenyellow;
+}
+
 
 .hidden {
     display: none;
