@@ -1,25 +1,60 @@
-/*function getSpanContent(num) {
-    let fragment = new DocumentFragment();
+/*const words1 = ['`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace'];
+const classKey1 = ['Backquote','Digit1','Digit2','Digit3','Digit4','Digit5','Digit6','Digit7','Digit8','Digit9','Digit0','Minus','Equal','Backspace'];
+const classKey2 = ['Tab','KeyQ','KeyW','KeyE','KeyR','KeyT','KeyY','KeyU','KeyI','KeyO','KeyP','BracketLeft','BracketRight','Backslash'];
+const classKey3 = ['CapsLock','KeyA','KeyS','KeyD','KeyF','KeyG','KeyH','KeyJ','KeyK','KeyL','Semicolon','Qoute','Enter'];
+const classKey4 = ['ShiftLeft','KeyZ','KeyX','KeyC','KeyV','KeyB','KeyN','KeyM','Comma','Period','Slash','ArrowUp','ShiftRight'];
+const classKey5 = ['ControlLeft','MetaLeft','AltLeft','Space','AltRight','ArrowLeft','ArrowDown','ArrowRight','ControlRight'];
 
-    for (let i = 1; i < num; i++) {
-        let span = document.createElement('span');
-        fragment.append(span);
+let div_wrapper = document.createElement('div');
+let div_row;
+let span_key;
+let span_key_down;
+
+div_wrapper.classList.add('keyboard-wrapper');
+
+document.body.append(div_wrapper);
+
+function createKeyRow(num) {
+    for(var i = 0; i < num; i++) {
+        div_row = document.createElement('div');
+        div_row.classList.add('keyboard-row');
+        div_wrapper.append(div_row);
+        if (i == 0) {
+            createKey(14, classKey1);
+        } else
+        if (i == 1) {
+            createKey(14, classKey2);
+        } else
+        if (i == 2) {
+            createKey(13, classKey3);
+        } else 
+        if (i == 3) {
+            createKey(13, classKey4);
+        } else 
+        if (i == 4) {
+            createKey(9, classKey5);
+        };
+        
     }
-
-    return fragment;
-
 };
-14,15,13,13,9;
-document.body.insertAdjacentHTML('afterbegin', '<div id="keyboard" class="keyboard-wrapper"></div>');
-document.body.insertAdjacentHTML('afterbegin', '<div class="area"><textarea id="area" class="textarea"></textarea></div>');
-for(var i = 0; i < 5; i++) {
-    keyboard.insertAdjacentHTML('afterbegin','<div class="keyboard-row"></div>');
+createKeyRow(5);
+
+function createKey(num, name) {        
+    for(var i = 0; i < num; i++) {
+        span_key = document.createElement('span');
+        span_key.classList.add(name[i]);
+        span_key.classList.add('key');
+        div_row.append(span_key);
+        createKeyDown();
+    }
 };
-let key_row = document.querySelectorAll('.keyboard-row');
-for (let i = 0; i < 5; i++) {
-    if (i == 0) {key_row[i].append(getSpanContent(14))};
-    if (i == 1) {key_row[i].append(getSpanContent(15))}
-}*/
+
+function createKeyDown() {
+    span_key_down = document.createElement('span');
+    span_key_down.classList.add('keyTextDown');
+    span_key.append(span_key_down);
+};*/
+
 
 let clickClack = document.querySelectorAll('.keyTextDown');
 clickClack.forEach(elem => elem.addEventListener('click', function(event) {
@@ -78,7 +113,6 @@ caps_lock.addEventListener('click', function(event) {
 });
 
 document.addEventListener('keydown', function(event) {
-    area.focus();
     for (item of document.querySelectorAll('.key')) {
         if (event.code == item.className.split(' ')[0]) {
             item.classList.add('active');
@@ -127,7 +161,7 @@ document.addEventListener('keydown', function(event) {
 });
 
 document.addEventListener('keyup', function(event) {
-    area.focus();
+
     for (item of document.querySelectorAll('.key')) {
         if (item.className.split(' ')[2] == 'active') {
             item.classList.remove('active');
