@@ -1,26 +1,3 @@
-/*function getSpanContent(num) {
-    let fragment = new DocumentFragment();
-
-    for (let i = 1; i < num; i++) {
-        let span = document.createElement('span');
-        fragment.append(span);
-    }
-
-    return fragment;
-
-};
-14,15,13,13,9;
-document.body.insertAdjacentHTML('afterbegin', '<div id="keyboard" class="keyboard-wrapper"></div>');
-document.body.insertAdjacentHTML('afterbegin', '<div class="area"><textarea id="area" class="textarea"></textarea></div>');
-for(var i = 0; i < 5; i++) {
-    keyboard.insertAdjacentHTML('afterbegin','<div class="keyboard-row"></div>');
-};
-let key_row = document.querySelectorAll('.keyboard-row');
-for (let i = 0; i < 5; i++) {
-    if (i == 0) {key_row[i].append(getSpanContent(14))};
-    if (i == 1) {key_row[i].append(getSpanContent(15))}
-}*/
-
 let clickClack = document.querySelectorAll('.keyTextDown');
 clickClack.forEach(elem => elem.addEventListener('click', function(event) {
     area.value += elem.innerText;
@@ -36,9 +13,9 @@ clickClackCaps.forEach(elem => elem.addEventListener('click', function(event) {
     area.value += elem.innerText;
 }));
 
-let shift = document.querySelector('.ShiftLeft');
+let shiftLeft = document.querySelector('.ShiftLeft');
 
-shift.addEventListener('mousedown', function(event) {
+shiftLeft.addEventListener('mousedown', function(event) {
     document.querySelectorAll('.keyTextDown').forEach(elem => {
         elem.classList.add('hidden');
     });
@@ -47,7 +24,27 @@ shift.addEventListener('mousedown', function(event) {
     });
 });
 
-shift.addEventListener('mouseup', function(event) {
+shiftLeft.addEventListener('mouseup', function(event) {
+    document.querySelectorAll('.keyTextDown').forEach(elem => {
+        elem.classList.remove('hidden');
+    });
+    document.querySelectorAll('.keyTextUp').forEach(elem => {
+        elem.classList.add('hidden');
+    });
+});
+
+let shiftRight = document.querySelector('.ShiftRight');
+
+shiftRight.addEventListener('mousedown', function(event) {
+    document.querySelectorAll('.keyTextDown').forEach(elem => {
+        elem.classList.add('hidden');
+    });
+    document.querySelectorAll('.keyTextUp').forEach(elem => {
+        elem.classList.remove('hidden');
+    });
+});
+
+shiftRight.addEventListener('mouseup', function(event) {
     document.querySelectorAll('.keyTextDown').forEach(elem => {
         elem.classList.remove('hidden');
     });
@@ -85,6 +82,7 @@ document.addEventListener('keydown', function(event) {
         }
     };
     if (event.code == 'Tab') {
+        event.preventDefault();
         area.value += '\t';
     } else
     if (event.code == 'ShiftLeft' || event.code == 'ShiftRight') {
@@ -112,16 +110,11 @@ document.addEventListener('keydown', function(event) {
             });
         }
     } else
-    if (event.code == 'Tab') {
-        area.value += '\t';
-    } else
     if (event.code == 'Enter') {
-        area.value += '\n';
+        area.value + '\n';
     } else 
-    if (event.code == 'Backspace') {
-        area.value = area.value.substring(0, area.value.length - 1) ;
-    } else {
-        area.value += event.key;
+    if (event.code == 'AltLeft' || event.code == 'AltRight' || event.code == 'ControlLeft' || event.code == 'ControlRight' || event.code == 'MetaLeft') {
+        event.preventDefault();
     }
     
 });
@@ -143,16 +136,25 @@ document.addEventListener('keyup', function(event) {
     };
 });
 
+
+
+/********* Обработка мыши **********/
+
+
+
 document.addEventListener('mousedown', function(event) {
     if (event.target.innerText == 'TAB') {
         area.value += '\t';
-    };
+    } else
     if (event.target.innerText == 'Enter') {
         area.value += '\n';
-    };
+    } else
+    if (event.target.innerText == 'TAB') {
+        area.value += '\t';
+    } else 
     if (event.target.innerText == 'Backspace') {
         area.value = area.value.substring(0, area.value.length - 1) ;
-    };
+    }
     for (item of document.querySelectorAll('.key')) {
         if(event.target.parentNode.className.split(' ')[0] == item.className.split(' ')[0]) {
             item.classList.add('active');
